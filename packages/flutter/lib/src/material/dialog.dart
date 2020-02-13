@@ -861,6 +861,7 @@ Future<T> showDialog<T>({
   )
   Widget child,
   WidgetBuilder builder,
+  Color barrierColor = Colors.Black54,
   bool useRootNavigator = true,
 }) {
   assert(child == null || builder == null);
@@ -884,7 +885,7 @@ Future<T> showDialog<T>({
     },
     barrierDismissible: barrierDismissible,
     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
-    barrierColor: Colors.black54,
+    barrierColor: barrierColor,
     transitionDuration: const Duration(milliseconds: 150),
     transitionBuilder: _buildMaterialDialogTransitions,
     useRootNavigator: useRootNavigator,
